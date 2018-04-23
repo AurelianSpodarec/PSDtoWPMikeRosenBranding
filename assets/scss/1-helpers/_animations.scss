@@ -1,0 +1,130 @@
+// ==========================================================================
+// #Animations
+// ==========================================================================
+//
+//	Table of Content
+//
+//	- Animated
+//	- Fade In Down
+//
+//
+//
+//
+//
+
+ 
+
+
+.animated {
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+
+//Fade In Down
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+//Key Frames
+@-webkit-keyframes fadeInDown {
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-120px);
+    }
+
+    100% {
+	    opacity: 1;
+	    -webkit-transform: translateY(0);
+    }
+
+}
+
+//Fade In Up
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	-moz-animation-name: fadeInUp;
+	-o-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+
+//Fade In 
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+    	opacity: 0;
+    }
+
+    100% {
+	    opacity: 1;
+	}
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes scroll-down {
+     0% {
+
+        -webkit-transform: translateY(17px);
+    }
+
+    100% {
+	    -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes loader__foldCubeAngle{
+    0%,10%{
+        -webkit-transform:perspective(140px) rotateX(-180deg);
+        transform:perspective(140px) rotateX(-180deg);
+        opacity:0;
+    }
+    25%,75%{
+        -webkit-transform:perspective(140px) rotateX(0);
+        transform:perspective(140px) rotateX(0);
+        opacity:1;
+    }
+    90%,to{
+        -webkit-transform:perspective(140px) rotateY(180deg);
+        transform:perspective(140px) rotateY(180deg);
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes loader__foldCubeAngle{
+    0%,10%{
+        -webkit-transform:perspective(140px) rotateX(-180deg);
+        transform:perspective(140px) rotateX(-180deg);
+        opacity:0;
+    }
+    25%,75%{
+        -webkit-transform:perspective(140px) rotateX(0);
+        transform:perspective(140px) rotateX(0);
+        opacity:1;
+    }
+    90%,to{-webkit-transform:perspective(140px) rotateY(180deg);
+        transform:perspective(140px) rotateY(180deg);
+        opacity:0;
+    }
+}
+

@@ -1,0 +1,54 @@
+// ==========================================================================
+// #Past Work Menu
+// ==========================================================================
+
+
+.work-menu {	
+	@include flexbox();
+	@include flex-wrap(wrap);
+	@include justify-content(center);
+
+
+
+	@include media-query(large) {
+		-webkit-flex-wrap: nowrap;
+  		flex-wrap: nowrap;
+	}
+
+	&__item {
+		
+
+		@include media-query(medium) {
+			flex: 1 0 50%;
+		}
+
+		@include media-query(large) {
+			flex: unset;
+		}
+
+		display: block;
+		.svg path,
+		.svg polygon {
+			fill: white!important;
+			@include transition(.25s ease-in-out);
+		}
+
+		&:hover .svg path,
+		&:hover .svg polygon{
+			fill: $color-brand!important;
+		}
+
+		&:hover .work-menu__link {
+			opacity: 1;
+			bottom: 0;
+			@include transform(translateY(0));
+		}
+	}
+
+	&__link {
+		@include transition(.25s ease-in-out);
+		opacity: 0;
+		@include transform(translateY(50%));
+	}
+
+}

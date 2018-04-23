@@ -1,0 +1,57 @@
+// ==========================================================================
+// #Section Contact Form
+// ==========================================================================
+
+.work-menu__item {
+	&:hover .svg path,
+	&:hover .svg polygon{
+		fill: $color-brand!important;
+	}
+}
+
+.svg path,
+.svg polygon {
+	fill: white!important;
+
+
+}
+
+svg {
+	    width: 100%;
+    height: 100%;
+}
+
+
+.contact-form {
+
+
+	@include media-query(medium) {
+		& li:first-child {
+			margin-right: 12px;
+		}
+
+		& li:first-child,
+		& li:nth-child(2) {
+			width: calc(50% - 6px);
+			float: left;
+		}
+	}
+
+	& input,
+	& textarea {
+		background-color: #e9e9e9;
+		font-size: 13px;
+		line-height: 31px;
+		color: rgb(110,110,110);
+		border: none;
+		width: 100%;
+   		margin-bottom: 1.2rem;
+		padding: .5rem 1rem;
+
+		&::placeholder {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+
+}

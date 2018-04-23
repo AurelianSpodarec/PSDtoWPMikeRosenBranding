@@ -1,0 +1,50 @@
+// ==========================================================================
+// #Triangle
+// ==========================================================================
+
+
+.triangle-top {
+	position: relative;
+
+	& span {
+		margin-left: 20px;
+	}
+
+	&:before {
+		content: '';
+	    display: block;
+	    height: 0;
+	    position: absolute;
+	    width: 0;
+	    overflow:hidden;
+	    bottom: 50%;
+	    margin: 0px 0px -5px 0px;
+	    /* transform: translateY(50%); */
+	    border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 8px solid white;
+	}
+}
+
+.triangle-right {
+	position: relative;
+
+	& span {
+		margin-left: 20px;
+	}
+
+	&:before {
+		 content: '';
+	    display: block;
+	    height: 0;
+	    position: absolute;
+	    width: 0;
+	    overflow:hidden;
+	    bottom: 50%;
+	    margin: 0 0 -2.5px -5px;
+	    transform: translateY(-50%);
+	    border-top: 5px solid transparent;
+	    border-left: 9px solid #f2cb13;
+	    border-bottom: 5px solid transparent;
+	}
+}

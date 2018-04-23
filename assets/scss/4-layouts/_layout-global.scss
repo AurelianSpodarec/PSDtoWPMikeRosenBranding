@@ -1,0 +1,75 @@
+// ==========================================================================
+// #Layout Global
+// ==========================================================================
+//
+//  Table of Content
+//  
+//  - Containers
+//  - Row
+//  -
+
+.container {
+    max-width: 760px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+    &--fluid {
+        max-width: unset;
+        width: unset;
+    }
+
+    &--small {
+        max-width: 760px;
+    }
+
+    &--narrow {
+        margin: 0 30%;
+    }
+
+    &--wider {
+        max-width: 1240px;
+    }
+}
+
+.section {
+    @include clearfix;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    z-index: 100;
+
+    &--inverted {
+        background-color: #1c1c1c;
+        color: rgb(233,233,233);
+    }
+
+    &--small {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &--medium {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    &--large {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    &--special {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+
+    &--featured-home {
+        padding-top: 50px;
+        padding-bottom: 130px;
+    }
+
+    &--footer {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+}
+

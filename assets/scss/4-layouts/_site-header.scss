@@ -1,0 +1,87 @@
+// ==========================================================================
+// #Site Header
+// ==========================================================================
+
+.site-header {
+	background-size: cover;
+	background-color: #1c1c1c;
+	border-top: 7px solid $color-brand;
+	z-index: 9000;
+	//@include fixed(top 0 right 0 left 0);
+    @include clearfix;
+    @include transition(.25s ease-in-out);
+ 
+	&__logo {
+		position: absolute;
+    	top: 5px;
+		font-size: 1.475em;
+	    font-weight: bold;
+	    display: inline-block;
+	    -webkit-animation-duration: .8s;
+	            animation-duration: .7s;
+	            animation-duration: .8s;
+	    -webkit-animation-delay: 1.2s;
+	            animation-delay: 1.2s;
+	    text-transform: uppercase;
+	    color: white;
+
+	    @include media-query(medium) {
+	    	font-size: 1.875em;
+	    	top: unset;
+	    	position: relative;
+		    float: left;
+	    }
+	}
+
+	&__toggle-button {
+		padding: 9px 10px;
+	    @include absolute(top 5px right 10px);
+	    @include box(50px);
+	    text-align: center;
+	    z-index: 99;	
+	    border: 0;
+	    background: none;
+	    cursor: pointer;
+
+		@include media-query(large) {
+			display: none;
+		}
+
+		&.is-active .site-header--toggle-span {
+	    	display: none;
+
+		    &:first-child {
+			    display: block;
+			    top: 25px;
+			    @include transform(rotate(45deg));
+			}
+
+			&:last-child {
+			    display: block;
+			    top: 25px;
+			    @include transform(rotate(-45deg));
+			}
+
+	    }//icon-bar
+	}
+
+	&--toggle-span {
+		background: #fff;
+	    @include absolute(top 14px left 13px);
+	    @include transition(all .8s ease);
+	    display: block;
+	    width: 22px;
+	    height: 2px;
+
+	    &:first-child {
+		    top: 31px;
+		}
+
+		&:last-child {
+		    top: 22px;
+		}
+
+		
+	}
+
+}

@@ -1,0 +1,58 @@
+// ==========================================================================
+// #Buttons
+// ==========================================================================
+
+.btn {
+	display: inline-block;
+	background: none;
+	@include transition(.25s ease-in-out);
+    font-size: .9rem;
+	padding: .6rem 1.75rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    cursor: pointer;
+    border: none;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    &--alt {
+    	color: white;
+
+    	&:hover {
+    		background: rgba(255, 255, 255, 0.2);
+    	}
+    }
+
+	&--primary {
+		border: 3px solid $color-brand;
+	}
+
+	// Button Sizes
+	&--small {
+
+	}
+
+	&--med {
+
+	}
+
+	&--large {
+		font-size: 1rem;
+		padding: 1.2rem 2rem;
+	}
+
+	&--let-spac {
+		letter-spacing: 7px;
+	}
+
+	&--contact {
+		font-weight: 800;
+		background-color: $color-brand;
+		font-size: 14px;
+		border-radius: 3px;
+		color: rgb(28,28,28);
+		padding: .4rem .8rem;
+    	line-height: 1rem;
+	}
+
+}

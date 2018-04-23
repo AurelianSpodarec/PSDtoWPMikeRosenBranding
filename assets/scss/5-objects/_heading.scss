@@ -1,0 +1,28 @@
+// ==========================================================================
+// #Heading
+// ==========================================================================
+
+.heading {
+	font-size: 1rem;
+	text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+
+    & span {
+    	&:after {
+	 		margin: 0 auto;
+		    right: 0;
+		    width: 126px;
+    	}
+    }
+
+    &--left {
+        text-align: left;
+
+        & span:after {
+            margin: unset;
+            left: 0;
+        }
+    }
+}

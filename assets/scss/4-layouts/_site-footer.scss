@@ -1,0 +1,54 @@
+// ==========================================================================
+// #Site footer
+// ==========================================================================
+
+.footer-main {
+	background-color: $color-brand;
+	border-bottom: 1.9rem solid #1c1c1c;
+
+	& p {
+		font-size: .8rem;
+		margin-bottom: 1.1rem;
+		line-height: 1.5rem;
+	}
+
+	&__info {
+		@include media-query(medium) {
+			float: left;
+			width: 85%;
+		}
+	}
+
+	&__menu {
+
+
+		& li  {
+			@include media-query(small) {
+				display: inline-block;
+			}
+		
+			@include media-query(medium) {
+				float: left;
+				text-align: right;
+				width: 15%;
+				display: block;
+			}
+		}
+
+		& a {
+			font-weight: 800;
+			text-transform: uppercase;
+			color: #2e2e2e;
+		}
+
+	}
+
+	&__bottom {
+		margin-top: 8rem;
+
+		&-link {
+			font-size: .7rem;
+			font-weight: 800;
+		}
+	}
+}

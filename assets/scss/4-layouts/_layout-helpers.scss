@@ -1,0 +1,34 @@
+// ==========================================================================
+// #Layout Helpers
+// ==========================================================================
+
+.row {
+    @include clearfix;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.ex-bold {
+	font-weight: 800;
+}
+
+.p-m-l {
+   	margin-bottom: 3.5rem;
+    line-height: 1.7rem;
+    font-weight: 600;
+    font-size: .9rem;
+}

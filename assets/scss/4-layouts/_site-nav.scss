@@ -1,0 +1,78 @@
+// ==========================================================================
+// #Site Nav
+// ==========================================================================
+
+.site-nav {
+   
+ 
+
+ 
+
+    @include media-query(large) {
+    	overflow-y: unset;
+	    @include relative(top inherit right inherit);
+	    float: right;
+	    @include box(auto);
+	    padding: 0;
+
+	    -webkit-animation-duration: .8s;
+	    animation-duration: .8s;
+	    -webkit-animation-delay: 1.2s;
+	   	animation-delay: 1.2s;
+
+	    border-left: none;
+	    background: none;
+
+	 
+    }
+
+	&__list {
+	    margin-top: 50px;
+	    margin-bottom: 1.8rem;
+
+      	@include media-query(large) {
+      		margin-bottom: unset;
+      		margin-top: unset;
+      	}
+	}
+
+	&__item {
+	    display: block;
+
+	    @include media-query(large) {
+	        display: inline-block;
+    		
+	    }
+	}
+
+	&__link {	
+		font-size: 22px;
+		letter-spacing: 1px;
+		line-height: 36px;
+		color: rgb(242,203,19);
+
+	    position: relative;
+	    display: block;
+	    text-decoration: none;
+	   
+	    
+
+	    &:hover {
+	    	color: white;
+	    }
+
+	    @include media-query(large) {
+	    	font-size: 14px;
+	    	line-height: 2.4;
+    		font-weight: 400;
+
+    		border-radius: 20px;
+   		border: 2px solid;
+   		border-color: transparent;
+		padding: 3px 13px;
+    	margin: 10px 0;
+	    }
+	}
+
+ 
+}
