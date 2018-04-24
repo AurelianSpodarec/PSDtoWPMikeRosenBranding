@@ -3,76 +3,77 @@
 // ==========================================================================
 
 .site-nav {
-   
- 
 
- 
+	&.is-active .site-nav__main {
+		transform: translateY(0);
+	}
 
-    @include media-query(large) {
-    	overflow-y: unset;
-	    @include relative(top inherit right inherit);
-	    float: right;
-	    @include box(auto);
-	    padding: 0;
+	&.is-active .site-nav__main .site-nav__item {
+		@include media-query(medium) {
+		    transform: translateY(0);		     
+		}
+	}
 
-	    -webkit-animation-duration: .8s;
-	    animation-duration: .8s;
-	    -webkit-animation-delay: 1.2s;
-	   	animation-delay: 1.2s;
+	@include media-query(medium) {
+		display: inline-block;
+		float: right;
+	}
 
-	    border-left: none;
-	    background: none;
-
-	 
-    }
+	&__main {
+		position: absolute;
+	    width: 100%;
+	    left: 0;
+	    right: 0;
+	    transform: translateY(-150%);
+	    @include transition(.25s ease-in-out);
+		@include media-query(medium) {
+			display: inline-block;
+			transform: translateY(0);
+			position: relative;
+		    padding-right: 55px;
+		}
+	}
 
 	&__list {
-	    margin-top: 50px;
-	    margin-bottom: 1.8rem;
+		text-align: center;
 
-      	@include media-query(large) {
-      		margin-bottom: unset;
-      		margin-top: unset;
-      	}
 	}
 
 	&__item {
-	    display: block;
+		display: block;
 
-	    @include media-query(large) {
-	        display: inline-block;
-    		
-	    }
+		@include media-query(medium) {
+			display: inline-block;
+			transition: .25s ease-in-out;
+		    transform: translateY(-100%);
+
+		    &:nth-child(1) {
+		    	transition-delay: .2s;
+		    }
+
+		    &:nth-child(2) {
+		    	transition-delay: .1s;
+		    }
+		}
 	}
 
-	&__link {	
-		font-size: 22px;
-		letter-spacing: 1px;
-		line-height: 36px;
-		color: rgb(242,203,19);
+	&__link {
+		padding: .8rem 0;
+		background-color: #414141;
+		border-bottom: 1px solid #4e4e4e;
+		color: $color-brand;
+		display: block;
+		font-size: .8rem;
+    	text-transform: uppercase;
 
-	    position: relative;
-	    display: block;
-	    text-decoration: none;
-	   
-	    
-
-	    &:hover {
-	    	color: white;
-	    }
-
-	    @include media-query(large) {
-	    	font-size: 14px;
-	    	line-height: 2.4;
-    		font-weight: 400;
-
-    		border-radius: 20px;
-   		border: 2px solid;
-   		border-color: transparent;
-		padding: 3px 13px;
-    	margin: 10px 0;
-	    }
+		@include media-query(medium) {
+			padding: unset;
+			background-color: unset;
+			border-bottom: unset;
+			padding: 0 1rem;
+			text-transform: uppercase;
+			font-size: .9rem;
+		}
 	}
 
- 
 }

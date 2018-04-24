@@ -18,19 +18,32 @@
 </head>
 <body <?php body_class(); ?>>
 
-
     <header class="site-header">
-    <div class="site-header__head">
-    <div class="container container--wider site-header--relative-wrapper">
-    <div class="site-header__head--inner">
+    <div class="site-header__outer">
+    <div class="site-header__inner">
 
-        <a class="site-header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-        <button class="site-header__toggle-button">
-            <span class="site-header--toggle-span"></span>
-            <span class="site-header--toggle-span"></span>
-            <span class="site-header--toggle-span"></span>
-        </button>
-        
+
+        <div class="site-header__nav-head">
+        <div class="site-header__nav-outer">
+        <div class="site-header__nav-head__inner">
+
+            <a class="site-header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <span class="site-header__logo-text"><?php bloginfo( 'name' ); ?></span>
+            </a>
+
+            <button class="site-header__hamburger">
+                <div class="site-header__hamburger-bars">
+                    <span class="site-header__hamburger--bar"></span>
+                    <span class="site-header__hamburger--bar"></span>
+                    <span class="site-header__hamburger--bar"></span>
+                </div>
+            </button>
+
+        </div>
+        </div>
+        </div>
+
+
         <div class="site-nav">
         <nav class="site-nav__main">
         <?php
@@ -46,7 +59,7 @@
         </nav>
         </div>
 
+
     </div>
-    </div><!-- /container -->
-    </div><!-- /site-header__head -->
+    </div>
     </header>

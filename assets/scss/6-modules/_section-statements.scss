@@ -1,0 +1,23 @@
+// ==========================================================================
+// #Section Stetements
+// ==========================================================================
+
+.slider-statements {
+
+	&__list {
+
+	}
+
+	&__item {
+		max-width: 800px;
+		margin: 0 auto;
+		font-size: 2.5rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		color: rgb(233,233,233);
+		font-style: italic;;
+		font-weight: 800;
+		text-align: center;
+	}
+
+}

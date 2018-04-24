@@ -6,6 +6,27 @@
 	background-color: $color-brand;
 	border-bottom: 1.9rem solid #1c1c1c;
 
+	&__logo {
+		font-weight: 800;
+		text-transform: uppercase;
+
+		& h3 {
+		    margin-bottom: 1.7rem;
+		    font-weight: 800;
+		}
+
+		& h3 span {
+			padding-bottom: 1rem;
+
+			&:after {
+				width: 90px;
+				left: 0;
+				height: 3px;
+				background-color: #f6e389;
+			}
+		}
+	}
+
 	& p {
 		font-size: .8rem;
 		margin-bottom: 1.1rem;
@@ -19,21 +40,33 @@
 		}
 	}
 
-	&__menu {
-
+	&__nav {
 
 		& li  {
+			margin-bottom: 10px;
+			font-size: .9rem;
+
+			& span {
+				padding-bottom: 5px;
+
+				&:after {
+					height: 3px;
+					background-color: #f6e389;
+				}
+			}
+
 			@include media-query(small) {
 				display: inline-block;
 			}
-		
-			@include media-query(medium) {
-				float: left;
-				text-align: right;
-				width: 15%;
-				display: block;
-			}
 		}
+
+		@include media-query(medium) {
+			float: left;
+			text-align: right;
+			width: 15%;
+			display: block;
+		}
+		
 
 		& a {
 			font-weight: 800;
@@ -49,6 +82,8 @@
 		&-link {
 			font-size: .7rem;
 			font-weight: 800;
+			background: none;
+    		border: none;
 		}
 	}
 }

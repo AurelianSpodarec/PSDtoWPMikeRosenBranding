@@ -1,7 +1,8 @@
 <section class="section section--featured-home">
-<div class="container container--fluid text-center">
+<div class="container container--fluid ">
+<div class="posts-featured">
 
-    <h2 class="heading highlighted highlighted--narrow highlighted--alternate">
+    <h2 class="heading  highlighted highlighted--narrow highlighted--alternate">
     <span>R+B Insights</span>
     </h2>
 
@@ -28,7 +29,8 @@
     <?php endwhile; endif; ?>
     </ul>
 
-  
 
+  
+</div>
 </div>
 </section>

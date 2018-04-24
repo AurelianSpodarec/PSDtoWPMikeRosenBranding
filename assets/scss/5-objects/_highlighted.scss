@@ -2,6 +2,16 @@
 // #Highlights
 // ==========================================================================
 
+.standar-underline {
+	display: inline-block;
+
+	& span{
+		color: #fff;
+		padding-bottom: 0px;
+		border-bottom: 8px solid $color-brand;
+		line-height: 48px;
+	}
+}
 
 .highlighted {
     position: relative;
@@ -24,6 +34,12 @@
 
 	&--alternate {
 		color: $color-brand;
+	}
+
+	&--negative {
+		& span:after {
+			background-color: $color-brand;
+		}
 	}
 
 

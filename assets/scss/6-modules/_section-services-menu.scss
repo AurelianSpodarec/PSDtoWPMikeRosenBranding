@@ -1,0 +1,30 @@
+// ==========================================================================
+// #Past Work Menu
+// ==========================================================================
+
+
+.services-menu {	
+	 
+	 &__item {
+
+	 	@include media-query(small) {
+	 		display: inline-block;
+	 	}
+
+	 	& a {
+	 		color: $color-brand;
+	 	}
+
+	 	&--active {
+	 		@include media-query(small) {
+	 			display: inline-block;
+	 		}
+
+	 		& a {
+	 			font-weight: bold;
+	 			color: $color-brand;
+	 		}
+	 	}
+	 }
+
+}

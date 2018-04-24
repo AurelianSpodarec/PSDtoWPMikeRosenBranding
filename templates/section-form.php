@@ -1,4 +1,4 @@
-<section class="section section--large section--inverted">
+<section class="section section--large section--form section--inverted">
 <div class="container">
 <div class="text-center">
 

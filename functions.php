@@ -142,18 +142,90 @@
 		}
 
 
+		class Nav_Footer_Walker extends Walker_Nav_Menu {
+  
+		// add classes to ul sub-menus
+		function start_lvl( &$output, $depth ) {
+		    // depth dependent classes
+		    $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
+		    $display_depth = ( $depth + 1); // because it counts the first submenu as 0
+		    $classes = array(
+		        'sub-menu',
+		        ( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
+		        ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
+		        'menu-depth-' . $display_depth
+		        );
+		    $class_names = implode( ' ', $classes );
+		  
+		    // build html
+		    $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
+		}
+		  
+		// add main/sub classes to li's and links
+		 function start_el( &$output, $item, $depth, $args ) {
+		    global $wp_query;
+		    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+		  
+		    // depth dependent classes
+		    $depth_classes = array(
+		        ( $depth == 0 ? 'footer-main__nav-item highlighted' : 'sub-menu-item' ),
+		        ( $depth >=2 ? 'sub-sub-menu-item' : '' ),
+		        ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
+		        'menu-item-depth-' . $depth
+		    );
+		    $depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+		  
+		    // passed classes
+		    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		    $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+		  
+		    // build html
+		    $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
+		  
+		    // link attributes
+		    $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+		    $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+		    $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+		    $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+		    $attributes .= ' class="nav-menu__link ' . ( $depth > 0 ? 'sub-nav-menu__link' : 'main-nav-menu__link' ) . '"';
+		  
+		    $item_output = sprintf( '%1$s<a%2$s><span>%3$s%4$s%5$s</span></a>%6$s',
+		        $args->before,
+		        $attributes,
+		        $args->link_before,
+		        apply_filters( 'the_title', $item->title, $item->ID ),
+		        $args->link_after,
+		        $args->after
+		    );
+		  
+		    // build html
+		    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+			}
+		}
 
 
-		// function services_post_type() {
+
+		function services_post_type() {
+		    $args = array(
+		        'public'    => true,
+		        'label'     => __( 'Services'),
+		        'singular_name'       => __( 'Service', 'Post Type Singular Name', 'wpheirarchy' ),
+		        'menu_icon' => 'dashicons-welcome-write-blog',
+		    );	
+		    register_post_type( 'services', $args );
+		}
+		add_action( 'init', 'services_post_type' );
+
+		// function services() {
 		//     $args = array(
 		//         'public'    => true,
 		//         'label'     => __( 'Services'),
-		//         'singular_name'       => __( 'Service', 'Post Type Singular Name', 'wpheirarchy' ),
+		//         'singular_name'       => __( 'Services', 'Post Type Singular Name', 'wpheirarchy' ),
 		//         'menu_icon' => 'dashicons-welcome-write-blog',
 		//     );	
 		//     register_post_type( 'services', $args );
 		// }
-		// add_action( 'init', 'services_post_type' );
+		// add_action( 'init', 'services' );
 
 		function work() {
 		    $args = array(
@@ -173,3 +245,30 @@
 			return $file_types;
 		}
 		add_action('upload_mimes', 'add_file_types_to_uploads');
+
+
+		add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
+	
+	function add_current_nav_class($classes, $item) {
+		
+		// Getting the current post details
+		global $post;
+		
+		// Getting the post type of the current post
+		$current_post_type = get_post_type_object(get_post_type($post->ID));
+		$current_post_type_slug = $current_post_type->rewrite[slug];
+			
+		// Getting the URL of the menu item
+		$menu_slug = strtolower(trim($item->url));
+		
+		// If the menu item URL contains the current post types slug add the current-menu-item class
+		if (strpos($menu_slug,$current_post_type_slug) !== false) {
+		
+		   $classes[] = 'circle--bottom';
+		
+		}
+		
+		// Return the corrected set of classes to be added to the menu item
+		return $classes;
+	
+	}

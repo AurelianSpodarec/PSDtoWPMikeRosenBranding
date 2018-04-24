@@ -4,17 +4,22 @@
 
 
 .posts-featured {	
-	
-	&__item {
-	    padding-bottom: 1rem;
-	}
+	text-align: left;
 
+	@include media-query(medium) {
+		text-align: center;
+	}
+	
 	&__list {
 		@include media-query(medium) {
 			display: inline-block;
 		    text-align: left;
 		    padding-left: 115px;
 		}
+	}
+
+	&__item {
+	    padding-bottom: 1rem;
 	}
 
 	&__link {

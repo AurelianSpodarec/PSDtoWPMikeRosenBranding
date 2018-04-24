@@ -1,8 +1,5 @@
-<section class="section section--collabs-home section--inverted text-center">
+<section class="section section--inverted text-center">
 <div class="container container--fluid">
-
-    <h2 class="heading highlighted highlighted--narrow"><span>Recent Collabs</span></h2>
-
 
     <?php
         $args = array( 
@@ -10,15 +7,26 @@
         );
 
         $loop = new WP_Query( $args );
+
+
+        if (is_single()) {
+            $saved_id = $post->ID;
+        } else {
+            $saved_id = false;
+        }
+
     ?>
 
     <div class="work-menu">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <div class="work-menu__item">
+        <?php if($saved_id === $post->ID) { ?>
+            <div class="work-menu__item circle-bottom ?>">
+        <?php } else { ?>
+            <div class="work-menu__item ?>">
+       <?php } ?>
         <a  href="<?php the_permalink(); ?>">
             <img class="work-menu__img svg" src="<?php the_field( 'thumbnail' ); ?>" />            
-            <button class="work-menu__link btn btn--contact">Case</button>
         </a>
         </div>        
     

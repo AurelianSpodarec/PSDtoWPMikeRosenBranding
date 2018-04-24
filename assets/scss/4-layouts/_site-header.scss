@@ -3,85 +3,131 @@
 // ==========================================================================
 
 .site-header {
-	background-size: cover;
 	background-color: #1c1c1c;
-	border-top: 7px solid $color-brand;
-	z-index: 9000;
-	//@include fixed(top 0 right 0 left 0);
-    @include clearfix;
-    @include transition(.25s ease-in-out);
- 
+	@include media-query(medium) {
+		border-top: 7px solid $color-brand;
+	}
+	@include clearfix;
+
 	&__logo {
-		position: absolute;
-    	top: 5px;
-		font-size: 1.475em;
-	    font-weight: bold;
-	    display: inline-block;
-	    -webkit-animation-duration: .8s;
-	            animation-duration: .7s;
-	            animation-duration: .8s;
-	    -webkit-animation-delay: 1.2s;
-	            animation-delay: 1.2s;
-	    text-transform: uppercase;
-	    color: white;
+		color: $color-brand;
+		font-weight: 800;
+		letter-spacing: 1px;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+
+	&__outer {
+		position: relative;
+		@include clearfix;
+
+		@include media-query(medium) {
+	    	line-height: 5.7rem;
+		}
+	}
+
+	&__inner {
+		position: relative;
+
+		@include media-query(medium) {
+	    	margin: 0 15px;
+		}
+	}
+
+	&__nav-head {
+		position: relative;
+    	z-index: 9999;
+    	background-color: #1c1c1c;
+		border-top: 4px solid $color-brand;
+
+		@include media-query(medium) {
+			display: inline-block;
+			border-top: unset;
+			position: unset;
+		}
+
+		&__inner {
+			margin: 5px 15px;
+    		position: relative;
+
+		    @include media-query(medium) {
+		    	margin: 0;
+		    	position: unset;
+		    }
+		}
+	}
+
+	 &__hamburger {
+        @include absolute(top 0 right 0 bottom 0);
+        width: 34px;
+        height: 28px;
+        border: 0;
+        background: none;
+    	z-index: 1000;
 
 	    @include media-query(medium) {
-	    	font-size: 1.875em;
-	    	top: unset;
-	    	position: relative;
-		    float: left;
-	    }
-	}
-
-	&__toggle-button {
-		padding: 9px 10px;
-	    @include absolute(top 5px right 10px);
-	    @include box(50px);
-	    text-align: center;
-	    z-index: 99;	
-	    border: 0;
-	    background: none;
-	    cursor: pointer;
-
-		@include media-query(large) {
-			display: none;
+			display: inline-block;
+			margin-left: .8rem;
+			height: auto;
+			display: inline-block;
+			line-height: 14px;
 		}
 
-		&.is-active .site-header--toggle-span {
-	    	display: none;
+        &:hover .site-header__hamburger--bar:nth-child(2) {
+        	width: 100%;
+        }
 
-		    &:first-child {
-			    display: block;
-			    top: 25px;
-			    @include transform(rotate(45deg));
-			}
+        &.is-active .site-header__hamburger--bar {
+            transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
+            &:first-child {
+               top: 6px;
+                @include transform(rotate(45deg));
+                transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                bottom: 6px;
+                @include transform(rotate(-45deg));
+                transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+            }
+        }
+    }
 
-			&:last-child {
-			    display: block;
-			    top: 25px;
-			    @include transform(rotate(-45deg));
-			}
+    &__hamburger-bars {
+        position: relative;
+        width: 100%;
+        height: 14px;
+        text-align: right;
+    }
 
-	    }//icon-bar
-	}
+    &__hamburger--bar {
+        display: block;
 
-	&--toggle-span {
-		background: #fff;
-	    @include absolute(top 14px left 13px);
-	    @include transition(all .8s ease);
-	    display: block;
-	    width: 22px;
-	    height: 2px;
+        width: 100%;
+        height: 2px;
 
-	    &:first-child {
-		    top: 31px;
-		}
+        transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
+        -webkit-animation: open-in .3s cubic-bezier(.18,.89,.67,1.16) .3s 1 normal forwards;
+                animation: open-in .3s cubic-bezier(.18,.89,.67,1.16) .3s 1 normal forwards;
 
-		&:last-child {
-		    top: 22px;
-		}
+        background-color: $color-brand;;
+        @include absolute(right);
+        @include border-radius(2px);
+        @include transition(all .2s);
+        &:first-child {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 6px;
+            width: 77%;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
 
-		
-	}
+    }
+
 
 }

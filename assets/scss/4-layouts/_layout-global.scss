@@ -37,10 +37,19 @@
     padding-bottom: 70px;
     z-index: 100;
 
+    & p {
+        margin-bottom: 3.5rem;
+        line-height: 1.7rem;
+        font-weight: 600;
+        font-size: .9rem;
+    }
+
     &--inverted {
         background-color: #1c1c1c;
         color: rgb(233,233,233);
     }
+
+    
 
     &--small {
         padding-top: 50px;
@@ -60,6 +69,32 @@
     &--special {
         padding-top: 70px;
         padding-bottom: 30px;
+    }
+
+    &--rub {
+        padding-bottom: 40px;
+    }
+
+    &--text {
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &--collabs-home {
+        padding-bottom: 0;
+        padding-top: 140px;
+    }
+
+    &--form {
+        padding-top: 80px;
+    }
+
+    &--statements {
+        background-color: #2e2e2e;
+        padding: 14rem 0;
     }
 
     &--featured-home {

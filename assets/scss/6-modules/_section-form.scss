@@ -2,25 +2,6 @@
 // #Section Contact Form
 // ==========================================================================
 
-.work-menu__item {
-	&:hover .svg path,
-	&:hover .svg polygon{
-		fill: $color-brand!important;
-	}
-}
-
-.svg path,
-.svg polygon {
-	fill: white!important;
-
-
-}
-
-svg {
-	    width: 100%;
-    height: 100%;
-}
-
 
 .contact-form {
 

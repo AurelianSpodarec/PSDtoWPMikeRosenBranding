@@ -16,7 +16,7 @@
 	}
 
 	&__item {
-		
+	    height: 100%;
 
 		@include media-query(medium) {
 			flex: 1 0 50%;
