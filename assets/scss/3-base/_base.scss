@@ -36,6 +36,7 @@ a {
 
 img {
     max-width: 100%;
+    margin: 0 0 2rem;
 }
 
 svg {
@@ -62,7 +63,9 @@ p {
 }
 
 p {
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
+    line-height: 1.7rem;
+    font-size: .9rem;
 }
 
 hr {
@@ -72,20 +75,32 @@ hr {
     border-top: 1px solid #c1c6cb;
 }
 
-blockquote {
-    font-weight: bold;
+%line:before {
+    content: '';
     display: block;
-    margin: 10px 0 0;
-    color: $color-brand;
-    padding: 1.5rem 2.5rem;
-    background: #1c1c1c;
-
-    & p {
-        text-transform: uppercase;
-        line-height: unset;
-        margin-bottom: 0;
-    }
+    position: absolute;
+    overflow: hidden;
 }
 
- 
-  
+%line-top:before {
+    top: 2.3rem;
+    width: 145px;
+    height: 2px;
+    background: $color-brand;
+}
+
+%line--full:before {
+    width: 100%;
+}
+
+.line-top--full {
+        position: relative;
+    width: auto;
+    display: inline-block;
+    @extend %line;
+    @extend %line-top;
+    @extend %line--full;
+}
+
+
+

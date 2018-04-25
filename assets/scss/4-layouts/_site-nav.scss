@@ -25,7 +25,9 @@
 	    left: 0;
 	    right: 0;
 	    transform: translateY(-150%);
+	    z-index: 9900;
 	    @include transition(.25s ease-in-out);
+	    
 		@include media-query(medium) {
 			display: inline-block;
 			transform: translateY(0);

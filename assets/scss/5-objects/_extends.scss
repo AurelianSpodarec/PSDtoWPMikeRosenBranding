@@ -1,0 +1,73 @@
+// ==========================================================================
+// #Extends
+// ==========================================================================
+
+
+// #Circle
+// ==========================================================================
+
+%circle:before {
+	content: '';
+    display: block;
+    position: absolute;
+    overflow:hidden;
+	border-radius: 50%;
+	background: white;
+}
+
+// POSITION
+%circle-top:before {
+	top: 0;
+    margin: 0px 0px -5px 0px;
+	width: 6px;
+	height: 6px;
+}
+
+%circle-right:before {
+	bottom: 0;
+    margin: 0px 0px -5px 0px;
+	width: 6px;
+	height: 6px;
+}
+
+%circle-bottom:before {
+	bottom: 0;
+    margin: 0px 0px -5px 0px;
+	width: 6px;
+	height: 6px;
+}
+
+%circle-left:before {
+	bottom: 0;
+    margin: 0px 0px -5px 0px;
+	width: 6px;
+	height: 6px;
+}
+
+
+
+// #Line
+// ==========================================================================
+
+%line:before {
+    content: '';
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+
+%line-top:before {
+    // top: 2.3rem;
+    top: 0;
+    width: 145px;
+    height: 2px;
+    background: $color-brand;
+}
+
+%line--full:before {
+    width: 100%;
+}
+
+
+
+

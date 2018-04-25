@@ -1,0 +1,12 @@
+// ==========================================================================
+// #Buttons
+// ==========================================================================
+
+.line-top--full {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    @extend %line;
+    @extend %line-top;
+    @extend %line--full;
+}

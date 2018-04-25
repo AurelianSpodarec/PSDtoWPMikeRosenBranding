@@ -18,7 +18,7 @@
 
 
 
-    <ul class="services-menu">
+    <ul class="services-menu line-top--full">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
             <?php

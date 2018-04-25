@@ -63,7 +63,7 @@
         height: 28px;
         border: 0;
         background: none;
-    	z-index: 1000;
+    	z-index: 9950;
 
 	    @include media-query(medium) {
 			display: inline-block;

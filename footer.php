@@ -17,9 +17,9 @@
 
 	<h3 class="ex-bold">General Inqueries </h3>
     <p>
-    <span>E-mail: info@rosenbranding.com</span>
+    <span>E-mail: <a href="mailto:aurelianxspodarec@gmail.com">info@rosenbranding.com</a></span>
 	<span>Address: Carrer San Vicente 2, El Rafol D’Almunia, Alicante, Spain</span>
-	<span>Telephone: 0034.3003.2002.56</span>
+	<span>Telephone: <a href="tel:07751022563">0034.3003.2002.56</a></span>
     </p>
     </div>
 

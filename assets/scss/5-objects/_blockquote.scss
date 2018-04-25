@@ -1,0 +1,24 @@
+// ==========================================================================
+// #Blockquote
+// ==========================================================================
+
+blockquote {
+    position: relative;
+    font-weight: bold;
+    display: block;
+    color: $color-brand;
+    padding: 3.3rem 2.5rem 2.5rem;
+    background: #1c1c1c;
+    letter-spacing: 1px;
+    margin: 0 0 2rem;
+    line-height: 2;
+
+    & p {
+        @extend %line;
+        @extend %line-top;
+        text-transform: uppercase;
+        line-height: unset;
+        margin: 0;
+    }
+}
+ 

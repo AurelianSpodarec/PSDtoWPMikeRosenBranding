@@ -36,7 +36,10 @@
 	&__info {
 		@include media-query(medium) {
 			float: left;
-			width: 85%;
+			width: 75%;
+		}
+		& span {
+			display: block;
 		}
 	}
 
@@ -45,6 +48,16 @@
 		& li  {
 			margin-bottom: 10px;
 			font-size: .9rem;
+
+			@include media-query(small) {
+				display: inline-block;
+				margin-right: .8rem;
+			}
+
+			@include media-query(medium) {
+				display: block;
+				margin-right: 0;
+			}
 
 			& span {
 				padding-bottom: 5px;
@@ -55,15 +68,12 @@
 				}
 			}
 
-			@include media-query(small) {
-				display: inline-block;
-			}
 		}
 
 		@include media-query(medium) {
 			float: left;
 			text-align: right;
-			width: 15%;
+			width: 25%;
 			display: block;
 		}
 		
