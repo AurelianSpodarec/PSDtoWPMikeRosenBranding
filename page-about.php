@@ -4,11 +4,19 @@
 		while ( have_posts() ) : the_post(); ?>
 
 
-<section class="section">
-<div class="container container--fluid">
+<section class="section section--special">
+<div class="container--fluid">
 
-	<img src="<?php echo get_the_post_thumbnail_url(); ?>"/>
-	<?php the_title(); ?>	
+	<div class="section-about__thumbnail" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+	<div class="section-about__overlay"></div>
+	
+		<div class="section-about__title">
+		<h2 class="standar-underline ex-bold">
+			<span><?php the_field('featured_title'); ?></span>
+		</h2>
+		</div>
+
+	</div>
 
 </div>
 </section>

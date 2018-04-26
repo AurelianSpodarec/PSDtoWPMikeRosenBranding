@@ -3,28 +3,64 @@
 // ==========================================================================
 
 
-.services-menu {	
-	 
-	 &__item {
+%services-menu__item {
+    position: relative;
 
-	 	@include media-query(small) {
-	 		display: inline-block;
-	 	}
+	@include media-query(small) {
+		display: inline-block;
+		margin-right: 1.2rem;
 
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+%services-menu__link {
+	color: $color-brand;
+}
+
+%services-menu__link-active {
+	font-weight: bold;
+	color: $color-brand;
+	@extend %circle;
+	@extend %circle-bottom;
+
+	&:before {
+		bottom: -.7rem;
+		background-color: $color-brand;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+	}
+}
+
+.services-menu {
+	position: relative;
+    width: auto;
+    display: inline-block;	
+	@extend %line;
+	@extend %line-top;
+	@extend %line--full;
+
+	&:before {
+	    top: -1.2rem;
+	}
+
+	&__item {
+		@extend %services-menu__item;
+	 	
 	 	& a {
-	 		color: $color-brand;
+	 		@extend %services-menu__link;
 	 	}
 
 	 	&--active {
-	 		@include media-query(small) {
-	 			display: inline-block;
-	 		}
+	 		@extend %services-menu__item;
 
 	 		& a {
-	 			font-weight: bold;
-	 			color: $color-brand;
+	 			@extend %services-menu__link-active;
 	 		}
 	 	}
-	 }
+	}
 
 }

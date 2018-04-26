@@ -1,4 +1,4 @@
-<section class="section section--inverted text-center">
+<section class="section section--small section--inverted text-center">
 <div class="container container--fluid">
 
     <?php
@@ -20,11 +20,26 @@
     <div class="work-menu">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <?php if($saved_id === $post->ID) { ?>
-            <div class="work-menu__item circle-bottom ?>">
-        <?php } else { ?>
-            <div class="work-menu__item ?>">
-       <?php } ?>
+       
+
+
+                    <?php if (is_page()) { ?>
+                
+                        <?php if (get_field( 'feature_on_work_page' ) == 1 ) { ?>
+                            <div class="work-menu__item--active">
+                        <?php } else { ?>
+                            <div class="work-menu__item">
+                        <?php } ?>
+
+                    <?php } else if($saved_id === $post->ID) { ?>
+
+                            <div class="work-menu__item--active">
+                            <?php } else { ?>
+                            <div class="work-menu__item">
+
+                    <?php } ?>
+
+
         <a  href="<?php the_permalink(); ?>">
             <img class="work-menu__img svg" src="<?php the_field( 'thumbnail' ); ?>" />            
         </a>

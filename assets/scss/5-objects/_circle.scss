@@ -8,173 +8,146 @@
 	content: '';
     display: block;
     position: absolute;
-    overflow:hidden;
+    overflow: hidden;
 	border-radius: 50%;
-}
-
-%circle-top:before {
-	top: 0;
-    margin: 0px 0px -5px 0px;
 	width: 6px;
 	height: 6px;
-	background: white;
+}
+
+// POSITION
+%circle-top:before {
+	top: 0;
+	width: 6px;
+	height: 6px;
+}
+
+%circle-right:before {
+	bottom: 0;
+	width: 6px;
+	height: 6px;
 }
 
 %circle-bottom:before {
 	bottom: 0;
-    margin: 0px 0px -5px 0px;
 	width: 6px;
 	height: 6px;
-	background: white;
 }
 
-.circle {
-	@extend %circle;
-
-	&--top {
-		@extend %circle;
-		@extend %circle-top;
-	}
-
-	&--bottom {
-		@extend %circle;
-		@extend %circle-bottom;
-	}
+%circle-left:before {
+	bottom: 0;
+	width: 6px;
+	height: 6px;
 }
-
-
-
-%circle-bottom {
-	&:before {
-		content: '';
-	    display: block;
-	    height: 0;
-	    position: absolute;
-	    width: 0;
-	    overflow:hidden;
-	    bottom: 50%;
-	    margin: 0px 0px -5px 0px;
-	    /* transform: translateY(50%); */
-		width: 6px;
-		height: 6px;
-		background: white;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
-		border-radius: 50px;
-	}
-}
-
-
 
 // .circle {
+// 	@extend %circle;
 
-// 	// POSITION
 // 	&--top {
-// 		@extends %circle;
-// 		@extends %circle-bottom;
+// 		@extend %circle;
+// 		@extend %circle-top;
 // 	}
 
 // 	&--right {
-
+// 		@extend %circle;
+// 		@extend %circle-right;
 // 	}
 
 // 	&--bottom {
-// 		@extends %circle;
-// 		@extends %circle-bottom;
+// 		@extend %circle;
+// 		@extend %circle-bottom;
 // 	}
 
 // 	&--left {
-
+// 		@extend %circle;
+// 		@extend %circle-left;
 // 	}
 
 // 	// SIZE
 // 	&--small {
 
 // 	}
-
 // }
 
 
+// .circle-brand {
 
-.circle-brand {
+// 	&:hover span:before {
+// 		background: $color-brand;
+// 	}
+// }
 
-	&:hover span:before {
-		background: $color-brand;
-	}
-}
+// .circle-bottom {
+// 	position: relative;
 
-.circle-bottom {
-	position: relative;
+// 	& span {
+// 		margin-left: 20px;
+// 	}
 
-	& span {
-		margin-left: 20px;
-	}
+// 	&:before {
+// 		content: '';
+// 	    display: block;
+// 	    height: 0;
+// 	    position: absolute;
+// 	    width: 0;
+// 	    overflow:hidden;
+// 	    bottom: 20px;
+// 	    left: 50%;
+// 	    margin: 0px 0px -5px 0px;
+// 	    /* transform: translateY(50%); */
+// 		width: 6px;
+// 		height: 6px;
+// 		background: white;
+// 		-moz-border-radius: 50px;
+// 		-webkit-border-radius: 50px;
+// 		border-radius: 50px;
+// 	}
+// }
 
-	&:before {
-		content: '';
-	    display: block;
-	    height: 0;
-	    position: absolute;
-	    width: 0;
-	    overflow:hidden;
-	    bottom: 20px;
-	    left: 50%;
-	    margin: 0px 0px -5px 0px;
-	    /* transform: translateY(50%); */
-		width: 6px;
-		height: 6px;
-		background: white;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
-		border-radius: 50px;
-	}
-}
+// .circle-top {
+// 	position: relative;
 
-.circle-top {
-	position: relative;
+// 	& span {
+// 		margin-left: 20px;
+// 	}
 
-	& span {
-		margin-left: 20px;
-	}
+// 	&:before {
+// 		content: '';
+// 	    display: block;
+// 	    height: 0;
+// 	    position: absolute;
+// 	    width: 0;
+// 	    overflow:hidden;
+// 	    bottom: 50%;
+// 	    margin: 0px 0px -5px 0px;
+// 	    /* transform: translateY(50%); */
+// 		width: 6px;
+// 		height: 6px;
+// 		background: white;
+// 		-moz-border-radius: 50px;
+// 		-webkit-border-radius: 50px;
+// 		border-radius: 50px;
+// 	}
+// }
 
-	&:before {
-		content: '';
-	    display: block;
-	    height: 0;
-	    position: absolute;
-	    width: 0;
-	    overflow:hidden;
-	    bottom: 50%;
-	    margin: 0px 0px -5px 0px;
-	    /* transform: translateY(50%); */
-		width: 6px;
-		height: 6px;
-		background: white;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
-		border-radius: 50px;
-	}
-}
+// .circle-right {
+// 	position: relative;
 
-.circle-right {
-	position: relative;
+// 	& span {
+// 		margin-left: 20px;
+// 	}
 
-	& span {
-		margin-left: 20px;
-	}
-
-	&:before {
-		 content: '';
-	    display: block;
-	    height: 0;
-	    position: absolute;
-	    width: 0;
-	    overflow:hidden;
-	    bottom: 50%;
-	    margin: 0 0 -2.5px -5px;
-	    transform: translateY(-50%);
-	    border-top: 5px solid transparent;
-	    border-left: 9px solid #f2cb13;
-	    border-bottom: 5px solid transparent;
-	}
-}
+// 	&:before {
+// 		 content: '';
+// 	    display: block;
+// 	    height: 0;
+// 	    position: absolute;
+// 	    width: 0;
+// 	    overflow:hidden;
+// 	    bottom: 50%;
+// 	    margin: 0 0 -2.5px -5px;
+// 	    transform: translateY(-50%);
+// 	    border-top: 5px solid transparent;
+// 	    border-left: 9px solid #f2cb13;
+// 	    border-bottom: 5px solid transparent;
+// 	}
+// }

@@ -2,17 +2,11 @@
 // #Past Work Menu
 // ==========================================================================
 
-%work-menu__item {
+%collabs-menu__item {
  		height: 100%;
  		position: relative; 
 		@extend %circle;
 		@extend %circle-bottom;
-
-		&:before {
-			margin: 0 auto;
-		    left: 0;
-		    right: 0;
-		}
 
 		@include media-query(medium) {
 			flex: 1 0 50%;
@@ -34,14 +28,14 @@
 			fill: $color-brand!important;
 		}
 
-		&:hover .work-menu__link {
+		&:hover .collabs-menu__link {
 			opacity: 1;
 			bottom: 0;
 			@include transform(translateY(0));
 		}
 }
 
-%work-menu__item--active {
+%collabs-menu__item--active {
 	.svg path,
 	.svg polygon{
 		fill: $color-brand!important;
@@ -57,7 +51,7 @@
 	}
 }
 
-.work-menu {	
+.collabs-menu {	
 	@include flexbox();
 	@include flex-wrap(wrap);
 	@include justify-content(center);
@@ -68,19 +62,7 @@
 	}
 
 	&__item {
-	   	@extend %work-menu__item;
-	   
-
-		&:before {
-		    @include transition(.25s ease-in-out);
-		}
-		&:hover {
-	   		@extend %work-menu__item--active;
-	   	}
-		&--active {
-			@extend %work-menu__item;
-			@extend %work-menu__item--active;
-		} 
+	   	@extend %collabs-menu__item;
 	}
 
 	&__link {

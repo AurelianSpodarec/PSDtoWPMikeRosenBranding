@@ -16,6 +16,7 @@
     &--fluid {
         max-width: unset;
         width: unset;
+        margin: 0 auto;
     }
 
     &--small {
@@ -33,8 +34,8 @@
 
 .section {
     @include clearfix;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     z-index: 100;
 
     &--inverted {
@@ -47,6 +48,8 @@
     &--small {
         padding-top: 50px;
         padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     &--medium {
@@ -60,6 +63,11 @@
     }
 
     &--special {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &--70-30 {
         padding-top: 70px;
         padding-bottom: 30px;
     }
@@ -81,22 +89,16 @@
         padding-top: 140px;
     }
 
-    &--form {
-        padding-top: 80px;
-    }
-
     &--statements {
         background-color: #2e2e2e;
         padding: 14rem 0;
     }
 
     &--featured-home {
-        padding-top: 50px;
         padding-bottom: 130px;
     }
 
     &--footer {
-        padding-top: 70px;
         padding-bottom: 30px;
     }
 }

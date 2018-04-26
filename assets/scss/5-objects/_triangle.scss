@@ -26,6 +26,42 @@
 	}
 }
 
+%triangle {
+
+}
+
+%triangle-right:before {
+	content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    overflow:hidden;
+    bottom: 50%;
+    margin: 0 0 -2.5px -5px;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-left: 9px solid #f2cb13;
+    border-bottom: 5px solid transparent;
+}
+
+%triangle-left:before {
+	content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    overflow:hidden;
+    bottom: 50%;
+    margin: 0 0 -2.5px -5px;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-right: 9px solid #f2cb13;
+    border-bottom: 5px solid transparent;
+}
+
+
+
 .triangle-right {
 	position: relative;
 
@@ -34,7 +70,7 @@
 	}
 
 	&:before {
-		 content: '';
+		content: '';
 	    display: block;
 	    height: 0;
 	    position: absolute;

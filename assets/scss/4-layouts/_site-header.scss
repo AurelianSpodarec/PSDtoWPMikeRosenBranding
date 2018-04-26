@@ -4,10 +4,28 @@
 
 .site-header {
 	background-color: #1c1c1c;
+	@include clearfix;
+    @include transition(.25s ease-in-out);
+    @include fixed(top 0 right 0 left 0);
+    z-index: 9999;
+    
+    &.is-sticky {
+        @include transform(translateY(-120%));
+        top: 0;
+
+        & .site-header__head--inner {
+            padding-top: 0;
+            @include transition(.25s ease-in-out); 
+        }
+    }
+    
+    &.sticky-show {
+        @include transform(translateY(0));  
+    }
+
 	@include media-query(medium) {
 		border-top: 7px solid $color-brand;
-	}
-	@include clearfix;
+	}	
 
 	&__logo {
 		color: $color-brand;
@@ -116,6 +134,7 @@
         @include absolute(right);
         @include border-radius(2px);
         @include transition(all .2s);
+        
         &:first-child {
             top: 0;
         }

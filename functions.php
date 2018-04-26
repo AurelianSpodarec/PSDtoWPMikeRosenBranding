@@ -139,6 +139,8 @@
 		    // build html
 		    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 			}
+			
+			
 		}
 
 
@@ -249,6 +251,7 @@
 
 		add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
 	
+
 	function add_current_nav_class($classes, $item) {
 		
 		// Getting the current post details
@@ -264,7 +267,7 @@
 		// If the menu item URL contains the current post types slug add the current-menu-item class
 		if (strpos($menu_slug,$current_post_type_slug) !== false) {
 		
-		   $classes[] = 'circle--bottom';
+		   $classes[] = 'is-active';
 		
 		}
 		

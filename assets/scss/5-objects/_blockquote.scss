@@ -19,6 +19,11 @@ blockquote {
         text-transform: uppercase;
         line-height: unset;
         margin: 0;
+
+        &:before {
+            width: 145px;
+            margin-top: 2.3rem;
+        }
     }
 }
  

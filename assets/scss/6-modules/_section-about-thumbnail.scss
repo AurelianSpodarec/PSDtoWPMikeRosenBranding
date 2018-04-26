@@ -1,0 +1,35 @@
+// ==========================================================================
+// #Section: About Thumbnail
+// ==========================================================================
+
+
+.section-about {
+
+	&__thumbnail{
+		position: relative;
+		height: 80vh;
+		background-size: cover;
+		background-position: center;
+		position: bottom;
+	}
+
+	&__overlay {
+		@extend %overlay;
+		z-index: 900;
+	}
+
+	&__title {
+		margin: 0 auto;
+		width: 700px;
+		z-index: 1000;
+		@include absolute(top 50% right 0 left 50%);
+		text-transform: uppercase;
+		text-align: center;
+		@include transform(translate(-50%, -50%));
+		font-size: 1.8rem;
+		letter-spacing: -1px;
+		line-height: 4rem;
+		font-weight: 800;
+		border-bottom: 9px;
+	}
+}

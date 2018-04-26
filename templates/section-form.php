@@ -16,18 +16,7 @@
     </p>
     </div>
 
-    <ul class="contact-form">
-        <li><input type="text" name="your-name" value="" size="40" class="" aria-invalid="false" placeholder="Name"></li>
-        <li><input type="tel" name="your-tel" value="" size="40" class="" aria-invalid="false" placeholder="Telephone Number"></li>
-        <li><input type="email" name="your-email" value="" size="40" class="" aria-invalid="false" placeholder="E-Mail Address"></li>
-        <li><input type="text" name="your-subject" value="" size="40" class="" aria-invalid="false" placeholder="Subject"></li>
-        <li><textarea type="text" name="your-message" cols="40" rows="10" class="" aria-invalid="false" placeholder="Message"></textarea></li>
-    </ul>
+    <?php echo do_shortcode( '[contact-form-7 id="4" title="Lets Exchange Ideas"]' ); ?>
 
-    <div class="text-center">
-    <input type="submit" value="SEND" class="btn btn--contact">
-
-
-</div>
 </div>
 </section>

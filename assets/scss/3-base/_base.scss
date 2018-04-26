@@ -4,14 +4,24 @@
 
 *, *:before, *:after {
 	@include box-sizing(border-box);
+
+    &{
+        outline: 0!important;
+    }
 }
 
+ 
+
 body {
-	   font-family: $global-font-family;
+    font-family: $global-font-family;
     font-size: $global-font-size;
     line-height: ($global-line-height/$global-font-size);
     color: $global-text-color;
     background-color: $global-background-color;
+
+    &.is-active .site-header__hamburger{
+
+    }
 
     @include media-query(medium) {
         font-size: 100%;
@@ -64,7 +74,7 @@ p {
 
 p {
     margin-bottom: 2rem;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
     font-size: .9rem;
 }
 
@@ -74,33 +84,5 @@ hr {
     border: 0;
     border-top: 1px solid #c1c6cb;
 }
-
-%line:before {
-    content: '';
-    display: block;
-    position: absolute;
-    overflow: hidden;
-}
-
-%line-top:before {
-    top: 2.3rem;
-    width: 145px;
-    height: 2px;
-    background: $color-brand;
-}
-
-%line--full:before {
-    width: 100%;
-}
-
-.line-top--full {
-        position: relative;
-    width: auto;
-    display: inline-block;
-    @extend %line;
-    @extend %line-top;
-    @extend %line--full;
-}
-
 
 

@@ -12,13 +12,13 @@
         $loop = new WP_Query( $args );
     ?>
 
-    <div class="work-menu">
+    <div class="collabs-menu">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <div class="work-menu__item">
+        <div class="collabs-menu__item">
         <a  href="<?php the_permalink(); ?>">
-            <img class="work-menu__img svg" src="<?php the_field( 'thumbnail' ); ?>" />            
-            <button class="work-menu__link btn btn--contact">Case</button>
+            <img class="collabs-menu__img svg" src="<?php the_field( 'thumbnail' ); ?>" />            
+            <button class="collabs-menu__link btn btn--contact">Case</button>
         </a>
         </div>        
     
