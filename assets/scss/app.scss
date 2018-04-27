@@ -39,13 +39,12 @@
 @import "5-objects/extends";
 @import "5-objects/blockquote";
 @import "5-objects/buttons";
+@import "5-objects/circle";
 @import "5-objects/heading";
 @import "5-objects/highlighted";
-@import "5-objects/inputs";
 @import "5-objects/line";
 @import "5-objects/overlay";
 @import "5-objects/triangle";
-@import "5-objects/circle";
 
 // ==========================================================================
 // 6-modules
@@ -56,5 +55,5 @@
 @import "6-modules/section-form";
 @import "6-modules/section-posts-featured";
 @import "6-modules/section-services-menu";
-@import "6-modules/section-statements";
+@import "6-modules/section-slider-home";
 @import "6-modules/single-thumbnail";

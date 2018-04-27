@@ -1,17 +1,15 @@
 <?php get_header(); ?>
 
+
 <?php get_template_part( 'templates/section', 'work-menu' ); ?>
  
-
-
-
-<section class="section section--text">
+<main class="section">
 <div class="container">
 
  	<?php the_content(); ?>
 
 </div>
-</section>
+</main>
 
 
 <?php get_footer(); ?>

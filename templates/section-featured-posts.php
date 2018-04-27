@@ -1,8 +1,8 @@
 <section class="section section--featured-home">
-<div class="container container--fluid ">
+<div class="container--fluid ">
 <div class="posts-featured">
 
-    <h2 class="heading  highlighted highlighted--narrow highlighted--alternate">
+    <h2 class="heading highlighted--main highlighted--narrow highlighted--alternate">
     <span>R+B Insights</span>
     </h2>
 
@@ -21,7 +21,7 @@
 		while (have_posts()) : the_post(); ?>
 	         
         <li class="posts-featured__item triangle-right">
-        <a href="<?php the_permalink(); ?>" class="posts-featured__link highlighted ">
+        <a href="<?php the_permalink(); ?>" class="posts-featured__link highlighted highlighted--inline">
         	<span class="uppercase bold"><?php the_title(); ?></span>
         </a>
     	</li>

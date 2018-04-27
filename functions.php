@@ -170,7 +170,7 @@
 		  
 		    // depth dependent classes
 		    $depth_classes = array(
-		        ( $depth == 0 ? 'footer-main__nav-item highlighted' : 'sub-menu-item' ),
+		        ( $depth == 0 ? 'footer-main__nav-item highlighted--main' : 'sub-menu-item' ),
 		        ( $depth >=2 ? 'sub-sub-menu-item' : '' ),
 		        ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
 		        'menu-item-depth-' . $depth

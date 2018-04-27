@@ -3,7 +3,7 @@
 <div class="text-center">
 
 
-    <h2 class="heading highlighted highlighted--narrow">
+    <h2 class="heading highlighted--main highlighted--narrow">
     <span>Let's Exchange Ideas</span>
     </h2>
 

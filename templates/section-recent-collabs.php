@@ -1,8 +1,7 @@
 <section class="section section--collabs-home section--inverted text-center">
-<div class="container container--fluid">
+<div class="container--fluid">
 
-    <h2 class="heading highlighted highlighted--narrow"><span>Recent Collabs</span></h2>
-
+    <h2 class="heading highlighted--main highlighted--narrow"><span>Recent Collabs</span></h2>
 
     <?php
         $args = array( 

@@ -50,9 +50,9 @@ var carousels = asNodeList.call(document.querySelectorAll('[data-carousel]'));
 
 carousels.forEach(function(elem) {
     var current = 0;
-    var carouselSlide = elem.querySelector('.Carousel-Slide');
+    var carouselSlide = elem.querySelector('.home-slider__slide');
     var carouselSlideItems = asNodeList.call(
-        carouselSlide.querySelectorAll('.Carousel-Slide-item')
+        carouselSlide.querySelectorAll('.home-slider__slide-item')
     );
 
     carouselSlide.style.width = (carouselSlideItems.length * 100) + '%';
@@ -63,12 +63,12 @@ carousels.forEach(function(elem) {
         item.style.backgroundImage = item.getAttribute('data-background');
     });
 
-    elem.querySelector('.Carousel-Controller-Nav-left')
+    elem.querySelector('.home-slider-Controller-Nav-left')
         .addEventListener('click', function(e) {
             current--;
             slide(current);
         });
-    elem.querySelector('.Carousel-Controller-Nav-right')
+    elem.querySelector('.home-slider-Controller-Nav-right')
         .addEventListener('click', function(e) {
             current++;
             slide(current);

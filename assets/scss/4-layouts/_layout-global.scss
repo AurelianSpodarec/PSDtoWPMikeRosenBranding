@@ -14,9 +14,10 @@
 	padding: 0 15px;
 
     &--fluid {
-        max-width: unset;
-        width: unset;
-        margin: 0 auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &--small {
@@ -42,8 +43,6 @@
         background-color: #1c1c1c;
         color: rgb(233,233,233);
     }
-
-    
 
     &--small {
         padding-top: 50px;
@@ -72,11 +71,8 @@
         padding-bottom: 30px;
     }
 
-    &--rub {
-        padding-bottom: 40px;
-    }
-
     &--text {
+
         & img {
             height: 100%;
             width: 100%;
@@ -95,7 +91,7 @@
     }
 
     &--featured-home {
-        padding-bottom: 130px;
+        padding-bottom: 120px;
     }
 
     &--footer {

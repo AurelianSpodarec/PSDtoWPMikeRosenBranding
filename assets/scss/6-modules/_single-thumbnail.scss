@@ -4,7 +4,8 @@
 
 
 .single-thumbnail {
-
+	margin-bottom: 2.3rem;
+	
 	&__wrap {
 		position: relative;
 	}
@@ -12,7 +13,6 @@
 	&__overlay {
 		@extend %overlay;
 		z-index: 900;
-	    margin-bottom: 2.3rem;
 	}
 
 	&__img {
@@ -26,14 +26,24 @@
 		position: absolute;
 	    font-weight: 800;
 	    text-transform: uppercase;
-	    font-size: 2.6rem;
-	    line-height: 1.8;
+	    font-size: 1.3rem;
+	    line-height: 1.6;
 	    top: 50%;
 	    width: 100%;
 	    z-index: 1000;
 	    left: 50%;
 	    transform: translate(-50%, -50%);
 	    text-align: center;
+
+	    @include media-query(medium) {
+	    	font-size: 2rem;
+	    	line-height: 1.8;
+	    }
+
+	    @include media-query(large) {
+	    	font-size: 2.6rem;
+	    	
+	    }
 	}
 
 }

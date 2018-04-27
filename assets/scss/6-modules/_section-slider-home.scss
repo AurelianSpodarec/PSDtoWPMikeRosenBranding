@@ -1,0 +1,115 @@
+// ==========================================================================
+// #Slider Home
+// ==========================================================================
+
+ 
+.home-slider{	
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #2e2e2e;
+    overflow: hidden;
+
+    &__slide-title {
+        font-size: 1rem;
+        margin: 0 auto;
+        text-transform: uppercase;
+        color: rgb(233,233,233);
+        font-style: italic;;
+        font-weight: 800;
+        text-align: center;
+        max-width: 300px;
+
+        @include media-query(medium) {
+            max-width: 600px;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        @include media-query(large) {
+            max-width: 800px;
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+        }
+
+    }
+
+    &__slide{
+        left: 0;
+        position: relative;
+        background: grey;
+        height: 100%;
+        transition: left 1s linear;
+        background-color: #2e2e2e;
+        padding: 7rem 0;
+
+        @include media-query(medium) {
+            padding: 10rem 0;
+        }
+
+        @include media-query(large) {
+          padding: 14rem 0;
+        }
+
+        &-item{
+            height: 100%;
+            float: left;
+        }
+    }
+}
+.home-slider-Controller, .home-slider-Controller-Nav{
+  box-sizing: border-box;
+  height: auto;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+
+  .home-slider-Controller-Nav-right{
+    float: right;
+  }
+}
+[class^=home-slider-Controller-Nav-]{
+  color: white;
+  cursor: pointer;
+  width: auto;
+  float:left;
+  font-size: 30px;
+  height: 100%;
+  &:hover{
+    color: #000;
+  }
+}
+
+.home-slider-Controller-Btn-left {
+	@extend %triangle-left;
+        padding: 15px;
+        line-height: 15px;
+        margin-top: -15px;
+    @include media-query(medium) {
+        padding: 20px;
+        line-height: 20px;
+        margin-top: -18px;
+    }
+    
+	&:before {
+		border-right: 9px solid #e9e9e9;
+	}
+}
+
+.home-slider-Controller-Btn-right {
+     padding: 15px;
+        line-height: 15px;
+        margin-top: -15px;
+       @include media-query(medium) {
+        padding: 20px;
+    line-height: 20px;
+    margin-top: -18px;
+    }
+    
+	@extend %triangle-right;
+	&:before {
+		border-left: 9px solid #e9e9e9;
+	}
+}

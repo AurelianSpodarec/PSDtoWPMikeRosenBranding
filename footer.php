@@ -1,12 +1,12 @@
 <?php get_template_part( 'templates/section', 'form' ); ?>
-
+    
 <footer class="section section--footer footer-main">
 <div class="container">
 
     <div class="clearfix">
 
     <div class="footer-main__logo">
-    <h3 class="highlighted">
+    <h3 class="highlighted--main highlighted--narrow highlighted--left">
         <span><?php bloginfo( 'name' ); ?></span>
     </h3>
     </div>
@@ -17,9 +17,15 @@
 
 	<h3 class="ex-bold">General Inqueries </h3>
     <p>
-    <span>E-mail: <a href="mailto:aurelianxspodarec@gmail.com">info@rosenbranding.com</a></span>
-	<span>Address: Carrer San Vicente 2, El Rafol D’Almunia, Alicante, Spain</span>
-	<span>Telephone: <a href="tel:07751022563">0034.3003.2002.56</a></span>
+    <?php
+        if( have_rows( 'footer_contact_details', 'user_1' ) ):
+            while ( have_rows('footer_contact_details', 'user_1' ) ) : the_row();
+        ?>
+                       
+        <span>E-mail: <a href="mailto: <?php the_sub_field('e-mail') ?>"><?php the_sub_field('e-mail') ?></a></span>
+    	<span>Address: <?php the_sub_field('address') ?></span>
+    	<span>Telephone: <a href="tel: <?php the_sub_field('telephone') ?>"><?php the_sub_field('telephone') ?></a></span>
+    <?php endwhile; endif; ?>
     </p>
     </div>
 
@@ -44,7 +50,6 @@
     
 </div>
 </footer>
-
 
 	<?php wp_footer(); ?>
 

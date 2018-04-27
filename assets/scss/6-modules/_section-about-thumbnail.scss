@@ -7,10 +7,18 @@
 
 	&__thumbnail{
 		position: relative;
-		height: 80vh;
+		height: 50vh;
 		background-size: cover;
 		background-position: center;
 		position: bottom;
+
+		@include media-query(medium) {
+			height: 65vh;
+		}
+
+		@include media-query(large) {
+			height: 80vh;
+		}
 	}
 
 	&__overlay {
@@ -20,16 +28,28 @@
 
 	&__title {
 		margin: 0 auto;
-		width: 700px;
 		z-index: 1000;
 		@include absolute(top 50% right 0 left 50%);
-		text-transform: uppercase;
-		text-align: center;
 		@include transform(translate(-50%, -50%));
-		font-size: 1.8rem;
+		text-align: center;
+		font-size: 1rem;
 		letter-spacing: -1px;
-		line-height: 4rem;
-		font-weight: 800;
+		line-height: 2.5rem;
 		border-bottom: 9px;
+		width: 100%;
+
+		@include media-query(medium) {
+	    	font-size: 1.4rem;
+	    	line-height: 3.5rem;
+	    	line-height: 1.8;
+	    	width: 500px;
+	    }
+
+	    @include media-query(large) {
+	    	font-size: 1.8rem;
+			letter-spacing: -1px;
+			line-height: 4.5rem;
+			width: 700px;
+	    }
 	}
 }

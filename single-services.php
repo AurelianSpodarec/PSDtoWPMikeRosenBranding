@@ -6,16 +6,15 @@
 <section class="section">
 <div class="container">
 
-	<?php if ( have_posts() ) : 
-	while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<h4 class="uppercase ex-bold" style="margin-bottom: 1.2rem;"><?php the_title(); ?></h4>
+		<h4><?php the_title(); ?></h4>
 
-	<?php the_content(); ?>
+		<?php the_content(); ?>
 
-<?php endwhile; else : ?>
-	<p><?php esc_html_e( 'Sorry, no contentfound.' ); ?></p>
-<?php endif; ?>
+	<?php endwhile; else : ?>
+		<p><?php esc_html_e( 'Sorry, no contentfound.' ); ?></p>
+	<?php endif; ?>
 
 </div>
 </section>
