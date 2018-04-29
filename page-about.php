@@ -5,13 +5,13 @@
 
 	<?php get_template_part( 'templates/section', 'about-thumb' ); ?>
 
-	<section class="section section--text">
+	<main class="section section--main">
 	<div class="container">
 
 		<?php the_content(); ?>
 
 	</div>
-	</section>
+	</main>
 
 <?php endwhile; else : ?>
 	<p><?php esc_html_e( 'Sorry, no content found.' ); ?></p>

@@ -19,7 +19,7 @@
 ?>
 
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-<main class="section">
+<main class="section section--main">
 <div class="container">
 
     <?php the_content(); ?>

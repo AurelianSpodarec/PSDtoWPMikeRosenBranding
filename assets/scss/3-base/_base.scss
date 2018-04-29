@@ -94,6 +94,14 @@ hr {
 }
 
 main {
+
+    & h2 {
+        font-weight: 800;
+        margin-bottom: .8rem;
+        font-size: 1rem;
+
+    }
+
     & img {
         height: 100%;
         width: 100%;

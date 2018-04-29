@@ -134,10 +134,34 @@ carousels.forEach(function(elem) {
   var siteNav = document.querySelector(".site-nav");
   var siteHamburger = document.querySelector(".site-header__hamburger");
 
-  function toggleMainMenu() {   
+  function toggleMainMenu() {
+    siteNav.classList.remove('is-active--wide');  
+    siteHamburger.classList.remove('is-active--wide'); 
     siteNav.classList.toggle("is-active");
     siteHamburger.classList.toggle("is-active");
+
+  
   }
+
+
+
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+          
+        if (siteNav.classList.contains('is-active--wide')) {
+          siteNav.classList.add('is-active');
+        }
+        if (siteHamburger.classList.contains('is-active--wide')) {
+          siteHamburger.classList.add('is-active');
+        }
+      } else {
+           
+      }
+  }
+
+  var x = window.matchMedia("(min-width: 768px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction)
 
   siteHamburger.addEventListener('click', toggleMainMenu, false);
 

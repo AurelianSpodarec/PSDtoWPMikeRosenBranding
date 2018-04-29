@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<section class="section">
+<main class="section section--main">
 <div class="container">
 
 	<h4>R+B Insights</h4>
@@ -17,7 +17,7 @@
 
  
 </div>
-</section>
+</main>
 
 
 <?php get_footer(); ?>

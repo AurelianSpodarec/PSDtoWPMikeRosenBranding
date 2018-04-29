@@ -31,7 +31,11 @@
                 <span class="site-header__logo-text"><?php bloginfo( 'name' ); ?></span>
             </a>
 
+            <?php if( is_page( array( 'about', 'past-work', 'services',  ) ) || is_singular( array( 'work', 'services' ) )  ) { ?>
+            <button class="site-header__hamburger is-active--wide">
+            <?php }  else { ?>
             <button class="site-header__hamburger">
+            <?php } ?>
                 <div class="site-header__hamburger-bars">
                     <span class="site-header__hamburger--bar"></span>
                     <span class="site-header__hamburger--bar"></span>
@@ -43,8 +47,11 @@
         </div>
         </div>
 
-
+        <?php if( is_page( array( 'about', 'past-work', 'services',  ) ) || is_singular( array( 'work', 'services' ) )  ) { ?>
+        <div class="site-nav is-active--wide">
+        <?php } else { ?>
         <div class="site-nav">
+        <?php } ?>
         <nav class="site-nav__main">
         <?php
             $args = [

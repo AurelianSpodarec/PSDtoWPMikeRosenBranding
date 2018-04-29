@@ -95,6 +95,25 @@
         	width: 100%;
         }
 
+         &.is-active--wide .site-header__hamburger--bar {
+            @include media-query(medium) {
+                transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
+                &:first-child {
+                   top: 6px;
+                    @include transform(rotate(45deg));
+                    transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    bottom: 6px;
+                    @include transform(rotate(-45deg));
+                    transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
+                }
+            }
+        }
+
         &.is-active .site-header__hamburger--bar {
             transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
             &:first-child {
@@ -111,6 +130,8 @@
                 transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
             }
         }
+
+
     }
 
     &__hamburger-bars {

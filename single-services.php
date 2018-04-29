@@ -3,7 +3,7 @@
 
 <?php get_template_part( 'templates/section', 'services-menu' ); ?>
 
-<section class="section">
+<section class="section section--main">
 <div class="container">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

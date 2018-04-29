@@ -239,6 +239,18 @@
 		    register_post_type( 'work', $args );
 		}
 		add_action( 'init', 'work' );
+
+		function footer() {
+		    $args = array(
+		        'public'    => true,
+		        'label'     => __( 'Footer'),
+		        'singular_name'       => __( 'Footer', 'Post Type Singular Name', 'wpheirarchy' ),
+		        'menu_icon' => 'dashicons-welcome-write-blog',
+		    );	
+		    register_post_type( 'footer', $args );
+		}
+		add_action( 'init', 'footer' );
+ 
  
 		function add_file_types_to_uploads($file_types){
 			$new_filetypes = array();

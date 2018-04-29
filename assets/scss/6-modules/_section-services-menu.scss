@@ -21,7 +21,6 @@
 }
 
 %services-menu__link-active {
-	font-weight: bold;
 	color: $color-brand;
 	@extend %circle;
 	@extend %circle-bottom;
@@ -52,6 +51,10 @@
 	 	
 	 	& a {
 	 		@extend %services-menu__link;
+	 		 @include transition(.15s ease-in-out);
+	 		&:hover {
+	 			@extend %services-menu__link-active;
+	 		}
 	 	}
 
 	 	&--active {
@@ -59,6 +62,7 @@
 
 	 		& a {
 	 			@extend %services-menu__link-active;
+	 			font-weight: bold;
 	 		}
 	 	}
 	}

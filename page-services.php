@@ -18,7 +18,7 @@
 		$loop = new WP_Query( $args );
 ?>
 
-<main class="section">
+<main class="section section--main">
 <div class="container">
 
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

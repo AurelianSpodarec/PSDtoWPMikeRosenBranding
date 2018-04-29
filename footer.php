@@ -13,15 +13,13 @@
 
     <div class="clearfix">
     <div class="footer-main__info">
-	<p>This is where we come in. We are masters at translating a vision you have in your head to concrete branding strategies, that will attract business. Rosen+Branding has consistently done this, in many forms, many projects, in many years.</p>
-
+	<?php the_field('about', 'user_1'); ?>
 	<h3 class="ex-bold">General Inqueries </h3>
     <p>
     <?php
         if( have_rows( 'footer_contact_details', 'user_1' ) ):
             while ( have_rows('footer_contact_details', 'user_1' ) ) : the_row();
-        ?>
-                       
+        ?>           
         <span>E-mail: <a href="mailto: <?php the_sub_field('e-mail') ?>"><?php the_sub_field('e-mail') ?></a></span>
     	<span>Address: <?php the_sub_field('address') ?></span>
     	<span>Telephone: <a href="tel: <?php the_sub_field('telephone') ?>"><?php the_sub_field('telephone') ?></a></span>

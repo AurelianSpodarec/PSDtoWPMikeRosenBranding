@@ -3,7 +3,7 @@
 
 <?php get_template_part( 'templates/section', 'work-menu' ); ?>
  
-<main class="section">
+<main class="section section--main">
 <div class="container">
 
  	<?php the_content(); ?>

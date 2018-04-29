@@ -17,26 +17,18 @@
 // POSITION
 %circle-top:before {
 	top: 0;
-	width: 6px;
-	height: 6px;
 }
 
 %circle-right:before {
-	bottom: 0;
-	width: 6px;
-	height: 6px;
+	right: 0;
 }
 
 %circle-bottom:before {
 	bottom: 0;
-	width: 6px;
-	height: 6px;
 }
 
 %circle-left:before {
-	bottom: 0;
-	width: 6px;
-	height: 6px;
+	left: 0;
 }
 
 // .circle {

@@ -35,9 +35,30 @@
 
 .section {
     @include clearfix;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     z-index: 100;
+
+    @include media-query(medium) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    &--main {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+            
+        @include media-query(medium) {
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+        }
+    }
 
     &--inverted {
         background-color: #1c1c1c;
@@ -57,8 +78,14 @@
     }
 
     &--large {
-        padding-top: 140px;
-        padding-bottom: 140px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        @include media-query(medium) {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+       
     }
 
     &--special {
